@@ -1,7 +1,7 @@
 // List of image paths (Replace with your own images)
 const photoPaths = [
-    'kh.jpg', 'rajinikanth.jpg', 'vijay.jpg', 'ajith.jpg', 'srk.jpg',
-    'srk.jpg', 'vjs.jpg', 'vdk.jpg', 'sam.jpg', 'priyankachopra.avif'
+    'itachi.jpeg', 'hulk.jpeg', 'thor.jpeg', 'wanda.jpeg', 'doctor.jpeg',
+    'ironman.jpeg', 'spiderman.jpeg', 'mj.jpeg', 'superman.jpeg', 'Captain America.jpeg'
 ];
 
 // Get references to the gallery container and overlay elements

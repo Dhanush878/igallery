@@ -1,5 +1,5 @@
 # Ex.08 Design of Interactive Image Gallery
-## Date:14/12/2024
+## Date:17/12/2024
 
 ## AIM:
 To design a web application for an inteactive image gallery with minimum five images.
@@ -26,7 +26,6 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-pic.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,14 +44,49 @@ pic.html
 
     <!-- Footer -->
     <footer>
-        <p> Designed and developed by [SONA.S (24900459)]</p>
+        <p> Designed and developed by RAHUL RIO S</p>
     </footer>
 
     <script src="gallery.js"></script> <!-- Link to JavaScript -->
 </body>
 </html>
 
-styles.css
+// List of image paths (Replace with your own images)
+const photoPaths = [
+    'itachi.jpeg', 'hulk.jpeg', 'thor.jpeg', 'wanda.jpeg', 'doctor.jpeg',
+    'ironman.jpeg', 'spiderman.jpeg', 'mj.jpeg', 'superman.jpeg', 'Captain America.jpeg'
+];
+
+// Get references to the gallery container and overlay elements
+const galleryContainer = document.getElementById('gallery-container');
+const overlay = document.getElementById('overlay');
+const overlayImage = document.getElementById('overlay-image');
+const closeButton = document.getElementById('close-button');
+
+// Create image elements for the gallery
+photoPaths.forEach(photo => {
+    const img = document.createElement('img');
+    img.src = photo;
+    img.alt = 'Gallery Image';
+    img.addEventListener('click', () => {
+        overlayImage.src = photo; // Set overlay image source
+        overlay.classList.remove('hidden'); // Show overlay
+    });
+    galleryContainer.appendChild(img);
+});
+
+// Close overlay when close button is clicked
+closeButton.addEventListener('click', () => {
+    overlay.classList.add('hidden'); // Hide overlay
+});
+
+// Close overlay when clicking outside the image
+overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+        overlay.classList.add('hidden');
+    }
+});
+
 
 /* Reset default styles */
 body, html {
@@ -63,7 +97,7 @@ body, html {
 
 /* Background image */
 body {
-    background-image: url('background.jpg'); /* Replace with your background image */
+    background-image: url('Ultimato.jpeg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
 }
@@ -147,47 +181,13 @@ footer p {
     margin: 0;
 }
 
-gallery.js
 
-// List of image paths (Replace with your own images)
-const photoPaths = [
-    'kh.jpg', 'rajinikanth.jpg', 'vijay.jpg', 'ajith.jpg', 'srk.jpg',
-    'srk.jpg', 'vjs.jpg', 'vdk.jpg', 'sam.jpg', 'priyankachopra.avif'
-];
-
-// Get references to the gallery container and overlay elements
-const galleryContainer = document.getElementById('gallery-container');
-const overlay = document.getElementById('overlay');
-const overlayImage = document.getElementById('overlay-image');
-const closeButton = document.getElementById('close-button');
-
-// Create image elements for the gallery
-photoPaths.forEach(photo => {
-    const img = document.createElement('img');
-    img.src = photo;
-    img.alt = 'Gallery Image';
-    img.addEventListener('click', () => {
-        overlayImage.src = photo; // Set overlay image source
-        overlay.classList.remove('hidden'); // Show overlay
-    });
-    galleryContainer.appendChild(img);
-});
-
-// Close overlay when close button is clicked
-closeButton.addEventListener('click', () => {
-    overlay.classList.add('hidden'); // Hide overlay
-});
-
-// Close overlay when clicking outside the image
-overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-        overlay.classList.add('hidden');
-    }
-});
 ```
 
 ## OUTPUT:
-![Screenshot (70)](https://github.com/user-attachments/assets/90115963-3425-4f9b-ab03-92a7779e4eef)
+
+![alt text](<Screenshot (187).png>)
+
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
