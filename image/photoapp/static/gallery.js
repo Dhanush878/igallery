@@ -1,7 +1,7 @@
 // List of image paths (Replace with your own images)
 const photoPaths = [
-    'itachi.jpeg', 'hulk.jpeg', 'thor.jpeg', 'wanda.jpeg', 'doctor.jpeg',
-    'ironman.jpeg', 'spiderman.jpeg', 'mj.jpeg', 'superman.jpeg', 'Captain America.jpeg'
+    'Gojou Satoru.jpg', 'Yuta Okkotsu.jpg', 'Uchiha Itachi.jpg', 'Sukuna.jpg', 'Kakshi.jpg',
+    'Naruto.jpg', 'Okarun.jpg', 'just.jpg', 'cyber.jpg', 'cyb.jpg'
 ];
 
 // Get references to the gallery container and overlay elements
